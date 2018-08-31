@@ -1,5 +1,5 @@
 function create(){
-    //创建流星
+    //创建雪花
     let el = document.createElement("div");
     el.innerHTML = "*";
     el.style.top = "0px";
@@ -11,19 +11,19 @@ function create(){
     return new animate(el); 
   }
   function animate(el){
-    //储存创建好的流星
+    //储存创建好的雪花
     this.el = el;
     //初始位置
     this.direaction();
     //判断是往左飞还是往右飞
     this.dir_center();
-    //飘流星最大高度
+    //飘雪花最大高度
     this.maxHeight = this.sumHeight();
-    //添加流星
+    //添加雪花
     document.getElementsByTagName("body")[0].appendChild(this.el);
-    //下流星
+    //下雪花
     this.down_snow();
-    //清除流星
+    //清除雪花
     this.clear_snow();
   }
   animate.prototype = {
